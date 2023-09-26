@@ -34,7 +34,7 @@ export class SubjectsService {
   async remove(id: number) {
     const subject = await this.findOne(id);
     if(!subject){
-      throw new NotFoundException('subject not found!!!')
+      throw new NotFoundException('subject not found!!!. Check again')
     }
     return this.subjectRepository.remove(subject);
   }

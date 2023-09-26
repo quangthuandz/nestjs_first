@@ -65,7 +65,7 @@ export class ReportsService {
   async remove(id: number) {
     const report = await this.findOne(id);
     if (!report) {
-      throw new NotFoundException('Report not found !!!');
+      throw new NotFoundException('Report not found !!!. Input valid id');
     }
     return this.reportRepository.remove(report);
   }

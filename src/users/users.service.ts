@@ -52,7 +52,7 @@ export class UsersService {
         const reports = await this.reportsService.updateReportsUserId(id);
 
         if (!userDelete) {
-            throw new NotFoundException('User not found !!!');
+            throw new NotFoundException('User not found !!! Check please');
         }
         return this.studentRepository.remove(userDelete);
     }
